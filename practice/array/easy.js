@@ -64,4 +64,48 @@ function removeDuplicate(arr) {
     }
     return newArray;
 }
-console.log(removeDuplicate(num1));
+// console.log(removeDuplicate(num1));
+
+//Write a function to merge two arrays into a single array.
+
+function mergeArray(arr1, arr2) {
+    return [...arr1, ...arr2];
+}
+// console.log(mergeArray(nums, num1))
+
+// Write a function to find the index of a specific element in an array.
+function findIndex(arr,ele) {
+    let index = -1;
+    for (let i = 0; i < arr.length; i++){
+        if (ele === arr[i]) {
+            index = i;
+            return index
+        }
+    }
+    return index;
+}
+
+// console.log(findIndex(num1, 3))
+
+// Write a function to filter out all even numbers from an array.
+function filterEven(arr) {
+    // return arr.filter(num=>num%2===0)
+    const evenNums = [];
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] % 2 === 0) {
+            evenNums.push(arr[i])
+        }
+    }
+    return evenNums;
+}
+// console.log(filterEven(num1));
+
+//Write a function that doubles each element in an array.
+function doubleElement(arr) {
+    let newArray = [];
+    for (let i = 0; i < arr.length; i++){
+        newArray.push(arr[i] * 2)
+    }
+    return newArray;
+}
+console.log(doubleElement(nums));
