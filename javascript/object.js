@@ -5,7 +5,7 @@ const obj = {
   age: 30,
   city: "New York",
 };
-console.log(obj);
+// console.log(obj);
 
 // Given an object car with properties make, model, and year, write a program to access and log each property.
 
@@ -15,6 +15,52 @@ const carObject = {
   year: 2022,
 };
 
-console.log("Make:", carObject.make); 
-console.log("Model:", carObject.model);
-console.log("Year:", carObject.year);  
+// console.log("Make:", carObject.make); 
+// console.log("Model:", carObject.model);
+// console.log("Year:", carObject.year);  
+
+// Create an object student with properties name, grade, and school. Update the grade property and log the updated object.
+
+const student = {
+    name: "tejal",
+    grade: "B",
+    school:"SICES"
+}
+student.grade = "A"
+// console.log(student.grade);
+
+// Given an object book with properties title and author, add a new property year and log the updated object.
+
+const book = {
+    title: "The Mountain is you",
+    author:"Brianna Wiest"
+}
+
+book.year = 2020;
+// console.log(book);
+
+//Create an object fruit with properties name, color, and taste. Delete the taste property and log the updated object.
+
+const fruit = {
+    name: "Mango",
+    color: "Yellow",
+    taste:"Sweet and Tangy"
+}
+
+delete fruit.taste
+// console.log(fruit);
+
+// Write a function that takes an object and a property name as arguments and returns true if the property exists in the object, otherwise false.
+
+function propertyExists(obj, propertyName) {
+    //approach 1
+    // return obj?.hasOwnProperty(propertyName);   
+
+    //approach 2
+    // return Object.keys(obj).includes(propertyName)
+
+    // approach 3
+    return propertyName in obj;
+}
+
+console.log(propertyExists(fruit,'name'));
