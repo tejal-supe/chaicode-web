@@ -90,6 +90,7 @@ function findIndex(arr,ele) {
 // Write a function to filter out all even numbers from an array.
 function filterEven(arr) {
     // return arr.filter(num=>num%2===0)
+    //  return arr.reduce((acc, curr) => (curr % 2 === 0 ? [...acc, curr] : acc), []);
     const evenNums = [];
     for (let i = 0; i < arr.length; i++){
         if (arr[i] % 2 === 0) {
